@@ -33,7 +33,7 @@ function init(instance) {
     }).then(function (ph) {
         /* Phridge outputs everything to stdout by default */
         ph.childProcess.cleanStdout.unpipe();
-        ph.childProcess.cleanStdout.pipe(process.stderr);
+        // ph.childProcess.cleanStdout.pipe(process.stderr);
         phantom = ph;
     }).disposer(phridge.disposeAll);
 }
